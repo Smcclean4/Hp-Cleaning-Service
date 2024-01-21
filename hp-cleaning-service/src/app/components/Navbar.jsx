@@ -12,7 +12,7 @@ export const Navbar = () => {
   return (
     <>
       <div className="p-6 flex flex-row items-center w-auto">
-        <div className="flex flex-row cursor-pointer sm:hidden z-10">
+        <div className="flex flex-row cursor-pointer lg:hidden z-10">
           <div className="w-auto h-auto absolute flex flex-col items-center right-5 top-10 text-center pr-2">
             <ul onClick={openNav}>
               <li
@@ -74,7 +74,7 @@ export const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden lg:block">
           <ul className="flex text-white">
             <li className="mx-10 underline underline-offset-8">
               <Link href="/services">Services</Link>
