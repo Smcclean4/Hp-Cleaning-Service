@@ -40,8 +40,8 @@ export const Navbar = () => {
             <ul
               className={
                 open
-                  ? "animate-fadingRev backdrop-blur-sm text-white"
-                  : "animate-fading backdrop-blur-sm text-white"
+                  ? "animate-fadingRev bg-slate-300 text-white"
+                  : "animate-fading bg-slate-300 text-white"
               }
             >
               <li

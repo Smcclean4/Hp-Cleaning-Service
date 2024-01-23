@@ -12,6 +12,17 @@ export default function Home() {
         <p className=" text-2xl md:text-4xl font-mono text-blue-900 text-center m-10 w-full lg:w-2/5">Top Rated Cleaning Services! Years in the industry = Best quality service!</p>
         <Image src={"/cleaning-service-3666011_1280.png"} alt={""} height="400" width="400"></Image>
       </div>
+      <div className="bg-white h-96 w-full lg:w-4/5 text-center">
+        <div>
+          <p className="text-lg sm:text-2xl font-mono underline text-blue-900 m-2">Customer Reviews</p>
+          <p className="text-sm sm:text-lg italic text-blue-900">If you don't believe us just ask our loyal customers!</p>
+        </div>
+      </div>
+      <div className="flex justify-around flex-row items-center m-12">
+        <div className="bg-yellow-400 rounded-full text-white px-8 py-2 cursor-pointer font-mono">
+          <p>Book Now!</p>
+        </div>
+      </div>
     </main>
   )
 }
