@@ -23,6 +23,9 @@ export default function Home() {
           <p>Book Now!</p>
         </div>
       </div>
+      <div className="bg-blue-500 flex text-center text-white h-19 w-full p-2">
+        <p className="w-full">© 2024 High Power Cleaning Service. Proudly designed by <span className="underline italic text-lg cursonr-pointer">SLM</span></p>
+      </div>
     </main>
   )
 }
