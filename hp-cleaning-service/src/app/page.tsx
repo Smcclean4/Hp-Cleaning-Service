@@ -15,7 +15,7 @@ export default function Home() {
       <div className="bg-white h-96 w-full lg:w-4/5 text-center">
         <div>
           <p className="text-lg sm:text-2xl font-mono underline text-blue-900 m-2">Customer Reviews</p>
-          <p className="text-sm sm:text-lg italic text-blue-900">If you don't believe us just ask our loyal customers!</p>
+          <p className="text-sm sm:text-lg italic text-blue-900">If you don&apos;t believe us just ask our loyal customers!</p>
         </div>
       </div>
       <div className="flex justify-around flex-row items-center m-12">
