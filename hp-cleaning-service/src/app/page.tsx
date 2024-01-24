@@ -19,7 +19,7 @@ export default function Home() {
           <div className="bg-gray-100 drop-shadow-lg text-xl h-64 w-96 flex flex-col items-center">
             <Image className="relative -top-10 -right-40" src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} height="75" width="75"></Image>
             <Image className="absolute" src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200"></Image>
-            <p className="text-lg font-mono text-black p-2">This was the best service I've ever received!!</p>
+            <p className="text-lg font-mono text-black p-2">This was the best service I&apos;ve ever received!!</p>
             <p className="text-md font-mono text-black p-2">- Susan B. / Downey</p>
           </div>
           <div className="bg-gray-100 drop-shadow-lg text-xl h-64 w-96 flex flex-col items-center">
