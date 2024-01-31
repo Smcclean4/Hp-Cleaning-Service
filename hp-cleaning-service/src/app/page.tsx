@@ -15,32 +15,32 @@ export default function Home() {
       <div className="bg-white h-auto w-full lg:w-4/5 text-center items-center flex flex-col">
         <p className="text-lg sm:text-2xl font-mono underline text-blue-900 m-2">Customer Reviews</p>
         <p className="text-sm sm:text-lg italic text-blue-900">If you don&apos;t believe us just ask our loyal customers!</p>
-        <div className="flex flex-col md:flex-row justify-evenly items-center p-6 h-96 w-11/12">
-          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center">
-            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-40 h-16 w-16">
+        <div className="flex flex-col md:flex-row justify-evenly items-center p-6 h-auto w-11/12">
+          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-2">
+            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} height="100" width="100" objectFit="cover"></Image>
             </div>
-            <div className="relative w-3/4 pt-6">
+            <div className="relative w-3/4 pt-6 flex justify-center">
               <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
             </div>
             <p className="text-sm lg:text-lg font-mono text-black p-2">This was the best service I&apos;ve ever received!!</p>
             <p className="text-sm lg:text-md font-mono text-black p-2">- Susan B. / Downey</p>
           </div>
-          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center">
-            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-40 h-16 w-16">
+          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-2">
+            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} height="100" width="100" objectFit="cover"></Image>
             </div>
-            <div className="relative w-3/4 pt-6">
+            <div className="relative w-3/4 pt-6 flex justify-center">
               <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
             </div>
             <p className="text-sm lg:text-lg font-mono text-black p-2">Johnny was great at getting in and getting the job done. Would hire him again in the future.</p>
             <p className="text-sm lg:text-md font-mono text-black p-2">- Jim Downs / Long Beach</p>
           </div>
-          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center">
-            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-40 h-16 w-16">
+          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-2">
+            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} height="100" width="100" objectFit="cover"></Image>
             </div>
-            <div className="relative w-3/4 pt-6">
+            <div className="relative w-3/4 pt-6 flex justify-center">
               <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
             </div>
             <p className="text-sm lg:text-lg font-mono text-black p-2">Custer service here is unmatched. I felt like family the moment I walked in until the job was done.</p>
