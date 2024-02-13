@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar"
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
+      {/* High power cleaning and leading statement */}
       <div className="z-10 w-full items-center justify-between text-left lg:text-center font-mono text-xl p-6 lg:flex bg-blue-500 text-white">
         <p>High Power <br></br>Cleaning Service</p>
         <Navbar />
@@ -12,6 +13,18 @@ export default function Home() {
         <p className=" text-2xl md:text-4xl font-mono text-blue-900 text-center m-10 w-full lg:w-2/5">Top Rated Cleaning Services! Years in the industry = Best quality service!</p>
         <Image src={"/cleaning-service-3666011_1280.png"} alt={""} height="400" width="400"></Image>
       </div>
+      {/* Image and skillset highlight */}
+      <div className="w-full flex flex-row items-center justify-around m-10">
+        <div className="relative">
+          <Image className="relative top-7 z-40" src={"/pexels-tima-miroshnichenko-6197121.jpg"} height="350" width="350" alt={""}></Image>
+          <Image className="absolute -top-7" src={"/pexels-tima-miroshnichenko-6197122.jpg"} height="350" width="350" alt={""}></Image>
+        </div>
+        <div className="flex flex-col text-center w-2/5">
+          <p className="text-3xl text-blue-900 font-mono">Rated and Known for our Services. Maintained and built upon our Technology.</p>
+          <p className="font-mono text-2xl">Efficiently manage your service, allocate tasks, and enhance customer experience with real-time data visibility and customized workflows.</p>
+        </div>
+      </div>
+      {/* Customer review section */}
       <div className="bg-white h-auto w-full lg:w-4/5 text-center items-center flex flex-col">
         <p className="text-lg sm:text-2xl font-mono underline text-blue-900 m-2">Customer Reviews</p>
         <p className="text-sm sm:text-lg italic text-blue-900">If you don&apos;t believe us just ask our loyal customers!</p>
