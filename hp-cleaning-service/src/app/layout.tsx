@@ -26,7 +26,6 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <meta name="theme-color" content="#3b82f6" />
-        <script src="https://kit.fontawesome.com/42005de702.js" crossOrigin="anonymous"></script>
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
