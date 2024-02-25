@@ -3,6 +3,10 @@ import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import './globals.css'
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,10 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta name="theme-color" content="#3b82f6" />
         <script src="https://kit.fontawesome.com/42005de702.js" crossOrigin="anonymous"></script>
-      </head>
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   )

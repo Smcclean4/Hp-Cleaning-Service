@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Navbar } from "./components/Navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons/faLocationCrosshairs"
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons"
 
 export default function Home() {
   return (
@@ -16,10 +16,14 @@ export default function Home() {
         <Image src={"/cleaning-service-3666011_1280.png"} alt={""} height="400" width="400"></Image>
       </div>
       {/* Image and skillset highlight */}
-      <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-around my-20">
-        <div className="relative w-3/4 lg:w-2/4 h-72 items-center m-10">
-          <Image className="absolute bottom-28 -left-16 sm:left-2 md:left-14 z-50" src={"/pexels-tima-miroshnichenko-6197121.jpg"} height="350" width="350" alt={""}></Image>
-          <Image className="absolute -bottom-2 left-56 sm:left-72 md:left-80" src={"/pexels-tima-miroshnichenko-6197122.jpg"} height="250" width="250" alt={""}></Image>
+      <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between my-20">
+        <div className="relative">
+          <div className="relative w-96 lg:w-96 h-64 items-center m-10 z-50">
+            <Image src={"/pexels-tima-miroshnichenko-6197121.jpg"} alt={""} fill={true}></Image>
+          </div>
+          <div className="absolute bottom-12 left-80 w-64 h-96 items-center m-10">
+            <Image src={"/pexels-tima-miroshnichenko-6197122.jpg"} alt={""} fill={true}></Image>
+          </div>
         </div>
         <div className="flex flex-col text-center w-full lg:w-2/5 p-10">
           <p className="text-3xl text-blue-900 font-mono">Rated and Known for our Services. Maintained and built upon our Technology.</p>
@@ -29,7 +33,7 @@ export default function Home() {
       {/* Technology preview and Services indicator */}
       <div className="flex flex-row text-center w-full p-6">
         <div>
-          <FontAwesomeIcon icon={faLocationCrosshairs} size="lg" />
+          <FontAwesomeIcon icon={faLocationArrow} size="2xl" />
           <p>Get that monyounger</p>
         </div>
         <div>
@@ -95,6 +99,6 @@ export default function Home() {
       <div className="bg-blue-500 flex sm:text-lg text-sm text-center text-white h-19 w-full p-2">
         <p className="w-full">© 2024 High Power Cleaning Service. Proudly designed by <span className="underline italic sm:text-lg text-md cursonr-pointer"><a href="https://www.sidneymcclean.com" target="_blank">SLM</a></span></p>
       </div>
-    </main>
+    </main >
   )
 }
