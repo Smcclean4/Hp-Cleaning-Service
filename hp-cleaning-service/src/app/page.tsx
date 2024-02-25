@@ -16,18 +16,18 @@ export default function Home() {
         <Image src={"/cleaning-service-3666011_1280.png"} alt={""} height="400" width="400"></Image>
       </div>
       {/* Image and skillset highlight */}
-      <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between my-20">
-        <div className="relative">
-          <div className="relative w-96 lg:w-96 h-64 items-center m-10 z-50">
-            <Image src={"/pexels-tima-miroshnichenko-6197121.jpg"} alt={""} fill={true}></Image>
-          </div>
-          <div className="absolute bottom-12 left-80 w-64 h-96 items-center m-10">
+      <div className="w-full lg:w-11/12 flex flex-col lg:flex-row items-center justify-center lg:justify-between mt-12 mb-4 md:mt-36">
+        <div className="relative w-full md:w-auto flex flex-col md:flex-row justify-center items-center">
+          <div className="relative lg:absolute lg:bottom-12 lg:left-80 w-64 h-96 items-center m-2 md:m-10">
             <Image src={"/pexels-tima-miroshnichenko-6197122.jpg"} alt={""} fill={true}></Image>
           </div>
+          <div className="relative w-96 h-64 items-center m-2 md:m-10 z-50">
+            <Image src={"/pexels-tima-miroshnichenko-6197121.jpg"} alt={""} fill={true}></Image>
+          </div>
         </div>
-        <div className="flex flex-col text-center w-full lg:w-2/5 p-10">
-          <p className="text-3xl text-blue-900 font-mono">Rated and Known for our Services. Maintained and built upon our Technology.</p>
-          <p className="font-mono text-2xl">Efficiently manage your service, allocate tasks, and enhance customer experience with real-time data visibility and customized workflows.</p>
+        <div className="flex flex-col text-center w-full lg:w-2/5 md:w-3/4 p-10">
+          <p className="text-2xl lg:text-3xl xl:text-4xl text-blue-900 font-mono">Rated and Known for our Services. Maintained and built upon our Technology.</p>
+          <p className="font-mono text-xl lg:text-2xl xl:text-3xl">Efficiently manage your service, allocate tasks, and enhance customer experience with real-time data visibility and customized workflows.</p>
         </div>
       </div>
       {/* Technology preview and Services indicator */}
