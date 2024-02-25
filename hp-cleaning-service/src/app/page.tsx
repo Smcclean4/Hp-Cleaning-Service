@@ -59,7 +59,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-evenly items-center p-6 h-auto w-11/12">
           <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
             <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
-              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} height="100" width="100" objectFit="cover"></Image>
+              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
             <div className="relative w-3/4 pt-6 flex justify-center">
               <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
@@ -69,7 +69,7 @@ export default function Home() {
           </div>
           <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
             <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
-              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} height="100" width="100" objectFit="cover"></Image>
+              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
             <div className="relative w-3/4 pt-6 flex justify-center">
               <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
           <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
             <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
-              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} height="100" width="100" objectFit="cover"></Image>
+              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
             <div className="relative w-3/4 pt-6 flex justify-center">
               <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
