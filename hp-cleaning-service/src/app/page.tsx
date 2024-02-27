@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </div>
       {/* Technology preview and Services indicator */}
-      <div className="flex flex-row border-2 flex-wrap text-center items-center w-3/4 p-6">
+      <div className="flex flex-row flex-wrap justify-center text-center items-center w-3/4 p-6">
         <div className="w-1/4 m-2">
           <FontAwesomeIcon icon={faLocationDot} color="dodgerblue" size="2xl" />
           <p>
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="w-1/4 m-2">
           <FontAwesomeIcon icon={faPhone} color="dodgerblue" size="2xl" />
-          <p>Experience seamless communication with High Power's reliable phone services. Whether scheduling appointments, addressing inquiries, or providing support, our dedicated team is just a call away. Trust us to deliver exceptional service and personalized assistance, ensuring your cleaning needs are met with utmost efficiency and care.</p>
+          <p>Experience seamless communication with High Power&apos;s reliable phone services. Whether scheduling appointments, addressing inquiries, or providing support, our dedicated team is just a call away. Trust us to deliver exceptional service and personalized assistance, ensuring your cleaning needs are met with utmost efficiency and care.</p>
         </div>
         <div className="w-1/4 m-2">
           <FontAwesomeIcon icon={faStickyNote} color="dodgerblue" size="2xl" />
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
         <div className="w-1/4 m-2">
           <FontAwesomeIcon icon={faBucket} color="dodgerblue" size="2xl" />
-          <p>Unlock the power of pristine cleanliness with High Power's cutting-edge equipment insight. From powerful power washers to premium cleaning ingredients, we employ top-of-the-line tools and technology to ensure your space shines. Experience unmatched efficiency and quality with our commitment to using only the best equipment for exceptional results.</p>
+          <p>Unlock the power of pristine cleanliness with High Power&apos;s cutting-edge equipment insight. From powerful power washers to premium cleaning ingredients, we employ top-of-the-line tools and technology to ensure your space shines. Experience unmatched efficiency and quality with our commitment to using only the best equipment for exceptional results.</p>
         </div>
       </div>
       {/* Customer review section */}
