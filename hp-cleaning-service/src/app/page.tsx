@@ -1,7 +1,9 @@
 import Image from "next/image"
 import { Navbar } from "./components/Navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLocationArrow } from "@fortawesome/free-solid-svg-icons"
+import { faBroom, faBucket, faComputer, faCrosshairs, faHandsWash, faLocation, faLocationArrow, faLocationDot, faNoteSticky, faNotesMedical, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faPagelines } from "@fortawesome/free-brands-svg-icons"
+import { faStickyNote } from "@fortawesome/free-regular-svg-icons/faStickyNote"
 
 export default function Home() {
   return (
@@ -31,25 +33,31 @@ export default function Home() {
         </div>
       </div>
       {/* Technology preview and Services indicator */}
-      <div className="flex flex-row text-center w-full p-6">
-        <div>
-          <FontAwesomeIcon icon={faLocationArrow} size="2xl" />
-          <p>Get that monyounger</p>
+      <div className="flex flex-row border-2 flex-wrap text-center items-center w-3/4 p-6">
+        <div className="w-1/4 m-2">
+          <FontAwesomeIcon icon={faLocationDot} color="dodgerblue" size="2xl" />
+          <p>
+            Centralized. Efficient. Customized. Our office, strategically located in [Los Angeles, CA], ensures easy access for businesses. Impeccable cleanliness and organization define our space, reflecting the high standards we uphold. Our tailored solutions, delivered by skilled professionals, guarantee superior results for your commercial cleaning needs.</p>
         </div>
-        <div>
-
+        <div className="w-1/4 m-2">
+          <FontAwesomeIcon icon={faHandsWash} color="dodgerblue" size="2xl" />
+          <p>Indulge in the epitome of cleanliness and employee welfare with High Power. We prioritize your health and safety by exclusively using eco-friendly products, practicing regular hand washing, and maintaining a pristine work environment. Trust us to uphold the highest standards of hygiene for your utmost well-being.</p>
         </div>
-        <div>
-
+        <div className="w-1/4 m-2">
+          <FontAwesomeIcon icon={faComputer} color="dodgerblue" size="2xl" />
+          <p>Discover the power of streamlined communication and comprehensive reporting with High Power. Our email service keeps you informed in real-time, providing updates, reminders, and special offers directly to your inbox. Plus, access on-demand reports effortlessly, giving you full transparency and control over your cleaning operations.</p>
         </div>
-        <div>
-
+        <div className="w-1/4 m-2">
+          <FontAwesomeIcon icon={faPhone} color="dodgerblue" size="2xl" />
+          <p>Experience seamless communication with High Power's reliable phone services. Whether scheduling appointments, addressing inquiries, or providing support, our dedicated team is just a call away. Trust us to deliver exceptional service and personalized assistance, ensuring your cleaning needs are met with utmost efficiency and care.</p>
         </div>
-        <div>
-
+        <div className="w-1/4 m-2">
+          <FontAwesomeIcon icon={faStickyNote} color="dodgerblue" size="2xl" />
+          <p>Elevate your cleaning experience with our meticulous note-taking service at High Power. After every cleaning, our dedicated team leaves behind detailed notes, ensuring transparency and accountability. From areas addressed to special instructions, we provide comprehensive insights to guarantee your satisfaction and maintain a pristine environment.</p>
         </div>
-        <div>
-
+        <div className="w-1/4 m-2">
+          <FontAwesomeIcon icon={faBucket} color="dodgerblue" size="2xl" />
+          <p>Unlock the power of pristine cleanliness with High Power's cutting-edge equipment insight. From powerful power washers to premium cleaning ingredients, we employ top-of-the-line tools and technology to ensure your space shines. Experience unmatched efficiency and quality with our commitment to using only the best equipment for exceptional results.</p>
         </div>
       </div>
       {/* Customer review section */}
