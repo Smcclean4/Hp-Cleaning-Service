@@ -33,31 +33,37 @@ export default function Home() {
         </div>
       </div>
       {/* Technology preview and Services indicator */}
-      <div className="flex flex-row flex-wrap justify-center text-center items-center w-3/4 p-6">
-        <div className="w-1/4 m-2">
-          <FontAwesomeIcon icon={faLocationDot} color="dodgerblue" size="2xl" />
-          <p>
-            Centralized. Efficient. Customized. Our office, strategically located in [Los Angeles, CA], ensures easy access for businesses. Impeccable cleanliness and organization define our space, reflecting the high standards we uphold. Our tailored solutions, delivered by skilled professionals, guarantee superior results for your commercial cleaning needs.</p>
+      <div className="flex flex-row flex-wrap justify-center lg:justify-between text-center w-full lg:w-3/4 p-2 mb-24">
+        <div className="w-3/4 lg:w-80 m-2">
+          <FontAwesomeIcon className="m-4" icon={faLocationDot} color="dodgerblue" size="2xl" />
+          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Key Location</p>
+          <p className="font-mono  text-lg">
+            Centralized. Efficient. Customized. Our office, strategically located in [Los Angeles, CA], ensures easy access for businesses. Impeccable cleanliness and organization define our space, reflecting the high standards we uphold. Our tailored solutions guarantee superior results for your cleaning needs.</p>
         </div>
-        <div className="w-1/4 m-2">
-          <FontAwesomeIcon icon={faHandsWash} color="dodgerblue" size="2xl" />
-          <p>Indulge in the epitome of cleanliness and employee welfare with High Power. We prioritize your health and safety by exclusively using eco-friendly products, practicing regular hand washing, and maintaining a pristine work environment. Trust us to uphold the highest standards of hygiene for your utmost well-being.</p>
+        <div className="w-3/4 lg:w-80 m-2">
+          <FontAwesomeIcon className="m-4" icon={faHandsWash} color="dodgerblue" size="2xl" />
+          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Cleanliness Upheld</p>
+          <p className="font-mono  text-lg">Indulge in cleanliness and welfare with High Power. We prioritize health and safety, using eco-friendly products and maintaining a pristine environment. Trust us to uphold hygiene standards for your well-being.</p>
         </div>
-        <div className="w-1/4 m-2">
-          <FontAwesomeIcon icon={faComputer} color="dodgerblue" size="2xl" />
-          <p>Discover the power of streamlined communication and comprehensive reporting with High Power. Our email service keeps you informed in real-time, providing updates, reminders, and special offers directly to your inbox. Plus, access on-demand reports effortlessly, giving you full transparency and control over your cleaning operations.</p>
+        <div className="w-3/4 lg:w-80 m-2">
+          <FontAwesomeIcon className="m-4" icon={faComputer} color="dodgerblue" size="2xl" />
+          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Email Services</p>
+          <p className="font-mono  text-lg">Discover streamlined communication and reporting with High Power. Our email service keeps you updated in real-time, providing reminders and offers. Access on-demand reports for transparency and control.</p>
         </div>
-        <div className="w-1/4 m-2">
-          <FontAwesomeIcon icon={faPhone} color="dodgerblue" size="2xl" />
-          <p>Experience seamless communication with High Power&apos;s reliable phone services. Whether scheduling appointments, addressing inquiries, or providing support, our dedicated team is just a call away. Trust us to deliver exceptional service and personalized assistance, ensuring your cleaning needs are met with utmost efficiency and care.</p>
+        <div className="w-3/4 lg:w-80 m-2">
+          <FontAwesomeIcon className="m-4" icon={faPhone} color="dodgerblue" size="2xl" />
+          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">24/7 Phone Access</p>
+          <p className="font-mono  text-lg">Experience seamless communication with High Power&apos;s phone services. Whether scheduling appointments or addressing inquiries, our team is just a call away. Trust us for exceptional service.</p>
         </div>
-        <div className="w-1/4 m-2">
-          <FontAwesomeIcon icon={faStickyNote} color="dodgerblue" size="2xl" />
-          <p>Elevate your cleaning experience with our meticulous note-taking service at High Power. After every cleaning, our dedicated team leaves behind detailed notes, ensuring transparency and accountability. From areas addressed to special instructions, we provide comprehensive insights to guarantee your satisfaction and maintain a pristine environment.</p>
+        <div className="w-3/4 lg:w-80 m-2">
+          <FontAwesomeIcon className="m-4" icon={faStickyNote} color="dodgerblue" size="2xl" />
+          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Detailed Notes</p>
+          <p className="font-mono  text-lg">Elevate your cleaning experience with High Power&apos;s note-taking service. Detailed notes ensure transparency and accountability. From areas addressed to special instructions, we provide insights for your satisfaction.</p>
         </div>
-        <div className="w-1/4 m-2">
-          <FontAwesomeIcon icon={faBucket} color="dodgerblue" size="2xl" />
-          <p>Unlock the power of pristine cleanliness with High Power&apos;s cutting-edge equipment insight. From powerful power washers to premium cleaning ingredients, we employ top-of-the-line tools and technology to ensure your space shines. Experience unmatched efficiency and quality with our commitment to using only the best equipment for exceptional results.</p>
+        <div className="w-3/4 lg:w-80 m-2">
+          <FontAwesomeIcon className="m-4" icon={faBucket} color="dodgerblue" size="2xl" />
+          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Prestine Tools and Equipment</p>
+          <p className="font-mono  text-lg">Unlock pristine cleanliness with High Power&apos;s equipment insight. From power washers to cleaning ingredients, we employ top tools for exceptional results. Experience efficiency and quality with our commitment to using the best equipment.</p>
         </div>
       </div>
       {/* Customer review section */}
