@@ -14,7 +14,7 @@ export default function Home() {
         <Navbar />
       </div>
       <div className="flex justify-around items-center m-12 flex-col lg:flex-row lg:">
-        <p className=" text-2xl md:text-4xl font-mono text-blue-900 text-center m-10 w-full lg:w-2/5">Top Rated Cleaning Services! Years in the industry = Best quality service!</p>
+        <p className=" text-2xl md:text-4xl font-mono text-blue-900 text-center m-10 w-full lg:w-2/5">Top-rated cleaning service with years of experience, delivering excellence with meticulous attention to detail and eco-friendly products for spotless spaces.</p>
         <Image src={"/cleaning-service-3666011_1280.png"} alt={""} height="400" width="400"></Image>
       </div>
       {/* Image and skillset highlight */}
