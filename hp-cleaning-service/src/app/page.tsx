@@ -72,7 +72,7 @@ export default function Home() {
         <p className="text-sm sm:text-lg italic text-blue-900">If you don&apos;t believe us just ask our loyal customers!</p>
         <div className="flex flex-col md:flex-row justify-evenly items-center p-6 h-auto w-11/12">
           <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
-            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
+            <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
             <div className="relative w-3/4 pt-6 flex justify-center">
@@ -82,7 +82,7 @@ export default function Home() {
             <p className="text-sm lg:text-md font-mono text-black p-2">- Susan B. / Downey</p>
           </div>
           <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
-            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
+            <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
             <div className="relative w-3/4 pt-6 flex justify-center">
@@ -92,7 +92,7 @@ export default function Home() {
             <p className="text-sm lg:text-md font-mono text-black p-2">- Jim Downs / Long Beach</p>
           </div>
           <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
-            <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
+            <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
             <div className="relative w-3/4 pt-6 flex justify-center">
