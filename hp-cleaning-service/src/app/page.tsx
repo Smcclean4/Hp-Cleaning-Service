@@ -35,43 +35,43 @@ export default function Home() {
       {/* Technology preview and Services indicator */}
       <div className="flex flex-row flex-wrap justify-center lg:justify-between text-center w-full lg:w-3/4 p-2 mb-24">
         <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faLocationDot} color="dodgerblue" size="2xl" />
-          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Key Location</p>
+          <FontAwesomeIcon className="m-4" icon={faLocationDot} color="navy" size="2xl" />
+          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Key Location</p>
           <p className="font-mono  text-lg">
             Centralized. Efficient. Customized. Our office, strategically located in [Los Angeles, CA], ensures easy access for businesses. Impeccable cleanliness and organization define our space, reflecting the high standards we uphold. Our tailored solutions guarantee superior results for your cleaning needs.</p>
         </div>
         <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faHandsWash} color="dodgerblue" size="2xl" />
-          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Cleanliness Upheld</p>
+          <FontAwesomeIcon className="m-4" icon={faHandsWash} color="navy" size="2xl" />
+          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Cleanliness Upheld</p>
           <p className="font-mono  text-lg">Indulge in cleanliness and welfare with High Power. We prioritize health and safety, using eco-friendly products and maintaining a pristine environment. Trust us to uphold hygiene standards for your well-being.</p>
         </div>
         <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faComputer} color="dodgerblue" size="2xl" />
-          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Email Services</p>
+          <FontAwesomeIcon className="m-4" icon={faComputer} color="navy" size="2xl" />
+          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Email Services</p>
           <p className="font-mono  text-lg">Discover streamlined communication and reporting with High Power. Our email service keeps you updated in real-time, providing reminders and offers. Access on-demand reports for transparency and control.</p>
         </div>
         <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faPhone} color="dodgerblue" size="2xl" />
-          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">24/7 Phone Access</p>
+          <FontAwesomeIcon className="m-4" icon={faPhone} color="navy" size="2xl" />
+          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">24/7 Phone Access</p>
           <p className="font-mono  text-lg">Experience seamless communication with High Power&apos;s phone services. Whether scheduling appointments or addressing inquiries, our team is just a call away. Trust us for exceptional service.</p>
         </div>
         <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faStickyNote} color="dodgerblue" size="2xl" />
-          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Detailed Notes</p>
+          <FontAwesomeIcon className="m-4" icon={faStickyNote} color="navy" size="2xl" />
+          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Detailed Notes</p>
           <p className="font-mono  text-lg">Elevate your cleaning experience with High Power&apos;s note-taking service. Detailed notes ensure transparency and accountability. From areas addressed to special instructions, we provide insights for your satisfaction.</p>
         </div>
         <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faBucket} color="dodgerblue" size="2xl" />
-          <p className="underline text-xl font-mono text-blue-900 underline-offset-4 mb-2">Prestine Tools and Equipment</p>
+          <FontAwesomeIcon className="m-4" icon={faBucket} color="navy" size="2xl" />
+          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Prestine Tools and Equipment</p>
           <p className="font-mono  text-lg">Unlock pristine cleanliness with High Power&apos;s equipment insight. From power washers to cleaning ingredients, we employ top tools for exceptional results. Experience efficiency and quality with our commitment to using the best equipment.</p>
         </div>
       </div>
       {/* Customer review section */}
-      <div className="bg-white h-auto w-full lg:w-4/5 text-center items-center flex flex-col">
-        <p className="text-lg sm:text-2xl font-mono underline text-blue-900 m-2">Customer Reviews</p>
+      <div className="bg-gradient-to-r from-gray-400 via-blue-400 to-white h-auto w-full lg:w-4/5 text-center items-center flex flex-col">
+        <p className="text-lg sm:text-2xl font-mono underline text-white m-2">Customer Reviews</p>
         <p className="text-sm sm:text-lg italic text-blue-900">If you don&apos;t believe us just ask our loyal customers!</p>
         <div className="flex flex-col md:flex-row justify-evenly items-center p-6 h-auto w-11/12">
-          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
+          <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
             <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
@@ -81,7 +81,7 @@ export default function Home() {
             <p className="text-sm lg:text-lg font-mono text-black p-2">This was the best service I&apos;ve ever received!!</p>
             <p className="text-sm lg:text-md font-mono text-black p-2">- Susan B. / Downey</p>
           </div>
-          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
+          <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
             <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
             <p className="text-sm lg:text-lg font-mono text-black p-2">Johnny was great at getting in and getting the job done. Would hire him again in the future.</p>
             <p className="text-sm lg:text-md font-mono text-black p-2">- Jim Downs / Long Beach</p>
           </div>
-          <div className="bg-gray-100 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
+          <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
             <div className="absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
               <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
             </div>
