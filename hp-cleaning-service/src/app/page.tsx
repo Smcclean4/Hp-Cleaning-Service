@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </div>
       {/* Customer review section */}
-      <div className="bg-gradient-to-r from-gray-400 via-blue-400 to-white h-auto w-full lg:w-4/5 text-center items-center flex flex-col">
+      <div className="bg-gradient-to-r from-white via-blue-300 to-white h-auto w-full lg:w-4/5 text-center items-center flex flex-col">
         <p className="text-lg sm:text-2xl font-mono underline text-white m-2">Customer Reviews</p>
         <p className="text-sm sm:text-lg italic text-blue-900">If you don&apos;t believe us just ask our loyal customers!</p>
         <div className="flex flex-col md:flex-row justify-evenly items-center p-6 h-auto w-11/12">
@@ -98,7 +98,7 @@ export default function Home() {
             <div className="relative w-3/4 pt-6 flex justify-center">
               <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
             </div>
-            <p className="text-sm lg:text-lg font-mono text-black p-2">Custer service here is unmatched. I felt like family the moment I walked in until the job was done.</p>
+            <p className="text-sm lg:text-lg font-mono text-black p-2">Customer service here is unmatched. I felt like family the moment I walked in until the job was done.</p>
             <p className="text-sm lg:text-md font-mono text-black p-2">- Jack R. / Manhattan Beach</p>
           </div>
         </div>
