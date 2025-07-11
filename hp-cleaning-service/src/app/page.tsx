@@ -1,11 +1,48 @@
+"use client"
+
 import Image from "next/image"
 import { Navbar } from "./components/Navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBroom, faBucket, faComputer, faCrosshairs, faHandsWash, faLocation, faLocationArrow, faLocationDot, faNoteSticky, faNotesMedical, faPhone } from "@fortawesome/free-solid-svg-icons"
 import { faPagelines } from "@fortawesome/free-brands-svg-icons"
 import { faStickyNote } from "@fortawesome/free-regular-svg-icons/faStickyNote"
+import { useState, useEffect } from "react"
 
 export default function Home() {
+  const [currentReview, setCurrentReview] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReview((prev) => (prev + 1) % 3);
+    }, 4000); // Change review every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const reviews = [
+    {
+      id: 0,
+      borderColor: "border-yellow-500",
+      bgColor: "bg-yellow-500",
+      text: "This was the best service I've ever received!!",
+      author: "Susan B. / Downey"
+    },
+    {
+      id: 1,
+      borderColor: "border-green-500",
+      bgColor: "bg-green-500",
+      text: "Johnny was great at getting in and getting the job done. Would hire him again in the future.",
+      author: "Jim Downs / Long Beach"
+    },
+    {
+      id: 2,
+      borderColor: "border-red-500",
+      bgColor: "bg-red-500",
+      text: "Customer service here is unmatched. I felt like family the moment I walked in until the job was done.",
+      author: "Jack R. / Manhattan Beach"
+    }
+  ];
+
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* High power cleaning and leading statement */}
@@ -32,79 +69,54 @@ export default function Home() {
           <p className="font-mono text-xl lg:text-2xl xl:text-3xl">Efficiently manage your service, allocate tasks, and enhance customer experience with real-time data visibility and customized workflows.</p>
         </div>
       </div>
-      {/* Technology preview and Services indicator */}
-      <div className="flex flex-row flex-wrap justify-center lg:justify-between text-center w-full lg:w-3/4 p-2 mb-24">
-        <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faLocationDot} color="navy" size="2xl" />
-          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Key Location</p>
-          <p className="font-mono  text-lg">
-            Centralized. Efficient. Customized. Our office, strategically located in [Los Angeles, CA], ensures easy access for businesses. Impeccable cleanliness and organization define our space, reflecting the high standards we uphold. Our tailored solutions guarantee superior results for your cleaning needs.</p>
-        </div>
-        <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faHandsWash} color="navy" size="2xl" />
-          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Cleanliness Upheld</p>
-          <p className="font-mono  text-lg">Indulge in cleanliness and welfare with High Power. We prioritize health and safety, using eco-friendly products and maintaining a pristine environment. Trust us to uphold hygiene standards for your well-being.</p>
-        </div>
-        <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faComputer} color="navy" size="2xl" />
-          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Email Services</p>
-          <p className="font-mono  text-lg">Discover streamlined communication and reporting with High Power. Our email service keeps you updated in real-time, providing reminders and offers. Access on-demand reports for transparency and control.</p>
-        </div>
-        <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faPhone} color="navy" size="2xl" />
-          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">24/7 Phone Access</p>
-          <p className="font-mono  text-lg">Experience seamless communication with High Power&apos;s phone services. Whether scheduling appointments or addressing inquiries, our team is just a call away. Trust us for exceptional service.</p>
-        </div>
-        <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faStickyNote} color="navy" size="2xl" />
-          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Detailed Notes</p>
-          <p className="font-mono  text-lg">Elevate your cleaning experience with High Power&apos;s note-taking service. Detailed notes ensure transparency and accountability. From areas addressed to special instructions, we provide insights for your satisfaction.</p>
-        </div>
-        <div className="w-3/4 lg:w-80 m-2">
-          <FontAwesomeIcon className="m-4" icon={faBucket} color="navy" size="2xl" />
-          <p className="underline text-xl font-mono text-white underline-offset-4 mb-2">Prestine Tools and Equipment</p>
-          <p className="font-mono  text-lg">Unlock pristine cleanliness with High Power&apos;s equipment insight. From power washers to cleaning ingredients, we employ top tools for exceptional results. Experience efficiency and quality with our commitment to using the best equipment.</p>
-        </div>
-      </div>
       {/* Customer review section */}
-      <div className="bg-gradient-to-r from-white via-blue-300 to-white h-auto w-full lg:w-4/5 text-center items-center flex flex-col">
-        <p className="text-lg sm:text-2xl font-mono underline text-white m-2">Customer Reviews</p>
-        <p className="text-sm sm:text-lg italic text-blue-900">If you don&apos;t believe us just ask our loyal customers!</p>
-        <div className="flex flex-col md:flex-row justify-evenly items-center p-6 h-auto w-11/12">
-          <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
-            <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
-              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
-            </div>
-            <div className="relative w-3/4 pt-6 flex justify-center">
-              <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
-            </div>
-            <p className="text-sm lg:text-lg font-mono text-black p-2">This was the best service I&apos;ve ever received!!</p>
-            <p className="text-sm lg:text-md font-mono text-black p-2">- Susan B. / Downey</p>
+      <div className="h-auto md:h-96 w-full lg:w-4/5 text-center items-center flex flex-col">
+        <p className="text-2xl sm:text-3xl font-mono underline text-white m-2">Customer Reviews</p>
+        <p className="text-md sm:text-lg italic text-white">If you don&apos;t believe us just ask our loyal customers!</p>
+        
+        {/* Animated Review Carousel */}
+        <div className="flex justify-center items-center p-6 h-auto w-full relative">
+          <div className="flex items-center flex-col md:flex-row justify-center gap-4 w-full max-w-6xl">
+            {reviews.map((review, index) => {
+              const isActive = index === currentReview;
+              const isPrev = index === (currentReview - 1 + 3) % 3;
+              const isNext = index === (currentReview + 1) % 3;
+              
+              return (
+                <div
+                  key={review.id}
+                  className={`
+                    bg-white w-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
+                    transition-all duration-700 ease-in-out
+                    ${isActive 
+                      ? 'h-96 w-3/4 md:w-full scale-110 z-20 opacity-100' 
+                      : isPrev || isNext 
+                        ? 'h-80 w-80 scale-90 z-10 opacity-70' 
+                        : 'h-72 w-72 scale-75 z-0 opacity-40'
+                    }
+                    flex flex-col items-center m-4
+                  `}
+                >
+                  <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
+                    <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
+                  </div>
+                  <div className="relative w-3/4 pt-6 flex justify-center">
+                    <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
+                  </div>
+                  <div className={`h-10 w-full ${review.bgColor} text-white flex items-center justify-center my-2 transition-all duration-700`}>
+                    Best Rated Service
+                  </div>
+                  <p className="text-sm lg:text-lg font-mono text-black p-2">{review.text}</p>
+                  <p className="text-sm lg:text-md font-mono text-black p-2">- {review.author}</p>
+                </div>
+              );
+            })}
           </div>
-          <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
-            <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
-              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
-            </div>
-            <div className="relative w-3/4 pt-6 flex justify-center">
-              <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
-            </div>
-            <p className="text-sm lg:text-lg font-mono text-black p-2">Johnny was great at getting in and getting the job done. Would hire him again in the future.</p>
-            <p className="text-sm lg:text-md font-mono text-black p-2">- Jim Downs / Long Beach</p>
-          </div>
-          <div className="bg-gray-500 bg-opacity-25 drop-shadow-lg h-64 w-11/12 lg:w-96 flex flex-col items-center m-4">
-            <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
-              <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
-            </div>
-            <div className="relative w-3/4 pt-6 flex justify-center">
-              <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
-            </div>
-            <p className="text-sm lg:text-lg font-mono text-black p-2">Customer service here is unmatched. I felt like family the moment I walked in until the job was done.</p>
-            <p className="text-sm lg:text-md font-mono text-black p-2">- Jack R. / Manhattan Beach</p>
-          </div>
+        
         </div>
       </div>
       {/* Book now!! */}
-      <div className="flex justify-around flex-row items-center m-12">
+      <div className="flex justify-around flex-row items-center m-12 mt-6 md:mt-48">
         <div className="bg-yellow-400 rounded-full text-white px-8 py-2 cursor-pointer font-mono drop-shadow-md">
           <p>Book Now!</p>
         </div>
