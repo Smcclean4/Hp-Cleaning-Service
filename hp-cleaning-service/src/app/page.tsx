@@ -25,6 +25,7 @@ export default function Home() {
       borderColor: "border-yellow-500",
       bgColor: "bg-yellow-500",
       text: "This was the best service I've ever received!!",
+      image: "/pexels-vinicius-wiesehofer-289347-1130626.jpg",
       author: "Susan B. / Downey"
     },
     {
@@ -32,6 +33,7 @@ export default function Home() {
       borderColor: "border-green-500",
       bgColor: "bg-green-500",
       text: "Johnny was great at getting in and getting the job done. Would hire him again in the future.",
+      image:"/pexels-mastercowley-1300402.jpg",
       author: "Jim Downs / Long Beach"
     },
     {
@@ -39,17 +41,13 @@ export default function Home() {
       borderColor: "border-red-500",
       bgColor: "bg-red-500",
       text: "Customer service here is unmatched. I felt like family the moment I walked in until the job was done.",
+      image:"/pexels-creationhill-1681010.jpg",
       author: "Jack R. / Manhattan Beach"
     }
   ];
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      {/* High power cleaning and leading statement */}
-      <div className="z-10 w-full items-center justify-between text-left lg:text-center font-mono text-xl p-6 lg:flex bg-blue-500 text-white">
-        <p>High Power <br></br>Cleaning Service</p>
-        <Navbar />
-      </div>
       <div className="flex justify-around items-center m-12 flex-col lg:flex-row lg:">
         <p className=" text-2xl md:text-4xl font-mono text-blue-900 text-center m-10 w-full lg:w-2/5">Top-rated cleaning service with years of experience, delivering excellence with meticulous attention to detail and eco-friendly products for spotless spaces.</p>
         <Image src={"/cleaning-service-3666011_1280.png"} alt={""} height="400" width="400"></Image>
@@ -86,10 +84,10 @@ export default function Home() {
                 <div
                   key={review.id}
                   className={`
-                    bg-white w-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
+                    bg-white w-full h-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
                     transition-all duration-700 ease-in-out
                     ${isActive 
-                      ? 'h-96 w-3/4 md:w-full scale-110 z-20 opacity-100' 
+                      ? 'h-96 w-3/4 md:w-full scale-110 z-20 opacity-300' 
                       : isPrev || isNext 
                         ? 'h-80 w-80 scale-90 z-10 opacity-70' 
                         : 'h-72 w-72 scale-75 z-0 opacity-40'
@@ -97,17 +95,23 @@ export default function Home() {
                     flex flex-col items-center m-4
                   `}
                 >
+                    <Image
+                      className="rounded-full object-cover aspect-square mx-auto mt-2 border-4 border-gray-200 shadow-lg"
+                      src={`${review.image}`}
+                      alt="Review Image"
+                      width={180}
+                      height={180}
+                    />
                   <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
                     <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
                   </div>
-                  <div className="relative w-3/4 pt-6 flex justify-center">
+                  <div className="relative w-3/4 flex justify-center">
                     <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
                   </div>
                   <div className={`h-10 w-full ${review.bgColor} text-white flex items-center justify-center my-2 transition-all duration-700`}>
-                    Best Rated Service
+                    {review.author}
                   </div>
                   <p className="text-sm lg:text-lg font-mono text-black p-2">{review.text}</p>
-                  <p className="text-sm lg:text-md font-mono text-black p-2">- {review.author}</p>
                 </div>
               );
             })}
@@ -116,14 +120,10 @@ export default function Home() {
         </div>
       </div>
       {/* Book now!! */}
-      <div className="flex justify-around flex-row items-center m-12 mt-6 md:mt-48">
-        <div className="bg-yellow-400 rounded-full text-white px-8 py-2 cursor-pointer font-mono drop-shadow-md">
+      <div className="flex justify-around flex-row items-center m-12 mt-6 md:mt-56">
+        <div className="bg-yellow-400 text-xl rounded-full text-white px-12 py-4 border-1 border-grey-200 cursor-pointer font-mono drop-shadow-md">
           <p>Book Now!</p>
         </div>
-      </div>
-      {/* Footer */}
-      <div className="bg-blue-500 flex sm:text-lg text-sm text-center text-white h-19 w-full p-2">
-        <p className="w-full">© 2024 High Power Cleaning Service. Proudly designed by <span className="underline italic sm:text-lg text-md cursonr-pointer"><a href="https://www.sidneymcclean.com" target="_blank">SLM</a></span></p>
       </div>
     </main >
   )
