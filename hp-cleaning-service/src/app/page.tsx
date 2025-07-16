@@ -1,12 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Navbar } from "./components/Navbar"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBroom, faBucket, faComputer, faCrosshairs, faHandsWash, faLocation, faLocationArrow, faLocationDot, faNoteSticky, faNotesMedical, faPhone } from "@fortawesome/free-solid-svg-icons"
-import { faPagelines } from "@fortawesome/free-brands-svg-icons"
-import { faStickyNote } from "@fortawesome/free-regular-svg-icons/faStickyNote"
 import { useState, useEffect } from "react"
+import Gallery from './components/Gallery'
 
 export default function Home() {
   const [currentReview, setCurrentReview] = useState(0);
@@ -48,17 +44,17 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <div className="flex justify-around items-center m-12 flex-col lg:flex-row lg:">
+      <div className="flex justify-around items-center m-12 flex-col h-auto lg:flex-row lg:">
         <p className=" text-2xl md:text-4xl font-mono text-blue-900 text-center m-10 w-full lg:w-2/5">Top-rated cleaning service with years of experience, delivering excellence with meticulous attention to detail and eco-friendly products for spotless spaces.</p>
         <Image src={"/cleaning-service-3666011_1280.png"} alt={""} height="400" width="400"></Image>
       </div>
       {/* Image and skillset highlight */}
       <div className="w-full lg:w-11/12 flex flex-col lg:flex-row items-center justify-center lg:justify-between mt-12 mb-4 md:mt-36">
         <div className="relative w-full md:w-auto flex flex-col md:flex-row justify-center items-center">
-          <div className="relative lg:absolute lg:bottom-12 lg:left-80 w-64 h-96 items-center m-2 md:m-10">
+          <div className="relative border-2 border-blue-300 lg:absolute lg:bottom-12 lg:left-80 w-64 h-96 items-center m-2 md:m-10">
             <Image src={"/pexels-tima-miroshnichenko-6197122.jpg"} alt={""} fill={true}></Image>
           </div>
-          <div className="relative w-96 h-64 items-center m-2 md:m-10 z-50">
+          <div className="relative border-2 border-blue-300 w-96 h-64 items-center m-2 md:m-10 z-50">
             <Image src={"/pexels-tima-miroshnichenko-6197121.jpg"} alt={""} fill={true}></Image>
           </div>
         </div>
@@ -67,8 +63,10 @@ export default function Home() {
           <p className="font-mono text-xl lg:text-2xl xl:text-3xl">Efficiently manage your service, allocate tasks, and enhance customer experience with real-time data visibility and customized workflows.</p>
         </div>
       </div>
+            {/* Gallery */}
+            <Gallery />
       {/* Customer review section */}
-      <div className="h-auto md:h-96 w-full lg:w-4/5 text-center items-center flex flex-col">
+      <div className="h-auto mb-6 md:h-96 w-full lg:w-4/5 text-center items-center flex flex-col">
         <p className="text-2xl sm:text-3xl font-mono underline text-white m-2">Customer Reviews</p>
         <p className="text-md sm:text-lg italic text-white">If you don&apos;t believe us just ask our loyal customers!</p>
         
@@ -84,10 +82,10 @@ export default function Home() {
                 <div
                   key={review.id}
                   className={`
-                    bg-white w-full h-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
+                    bg-white w-3/5 md:w-4/5 h-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
                     transition-all duration-700 ease-in-out
                     ${isActive 
-                      ? 'h-96 w-3/4 md:w-full scale-110 z-20 opacity-300' 
+                      ? 'h-96 w-4/5 md:w-full scale-110 z-20 opacity-300' 
                       : isPrev || isNext 
                         ? 'h-80 w-80 scale-90 z-10 opacity-70' 
                         : 'h-72 w-72 scale-75 z-0 opacity-40'
@@ -120,7 +118,7 @@ export default function Home() {
         </div>
       </div>
       {/* Book now!! */}
-      <div className="flex justify-around flex-row items-center m-12 mt-6 md:mt-56">
+      <div className="flex justify-around flex-row items-center m-12 mt-64 md:mt-56">
         <div className="bg-yellow-400 text-xl rounded-full text-white px-12 py-4 border-1 border-grey-200 cursor-pointer font-mono drop-shadow-md">
           <p>Book Now!</p>
         </div>
