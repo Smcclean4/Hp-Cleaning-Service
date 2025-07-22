@@ -41,9 +41,41 @@ export default function Gallery() {
   const goToPrev = () => setCurrent((prev) => (prev - 1 + total) % total);
   const goToNext = () => setCurrent((prev) => (prev + 1) % total);
 
+  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchEndX, setTouchEndX] = useState(null);
+
+  // Minimum distance required to be considered a swipe
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEndX(null); // Reset previous
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    const distance = touchStartX - touchEndX;
+    if (distance > minSwipeDistance) {
+      // Swiped left
+      goToNext();
+    } else if (distance < -minSwipeDistance) {
+      // Swiped right
+      goToPrev();
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full py-8 my-14 ">
-      <div className="relative w-full bg-transparent h-screen min-h-[300px] max-h-[80vh] md:bg-gray-900/75 flex items-center justify-center overflow-hidden md:border-t-4 md:border-b-4 md:border-b-blue-500 md:border-t-blue-200 shadow-2xl">
+      <div
+        className="relative w-full bg-transparent h-screen min-h-[300px] max-h-full md:bg-gray-900/75 flex items-center justify-center overflow-hidden md:border-t-4 md:border-b-4 md:border-b-blue-500 md:border-t-blue-200 shadow-2xl"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         <button
           onClick={goToPrev}
           className="absolute left-4 invisible md:visible z-10 text-2xl bg-white/80 hover:bg-white/90 text-gray-900 rounded-full px-4  py-2 shadow-md focus:outline-none top-1/2 -translate-y-1/2"

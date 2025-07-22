@@ -66,13 +66,13 @@ export default function Home() {
             {/* Gallery */}
             <Gallery />
       {/* Customer review section */}
-      <div className="h-auto mb-6 md:h-96 w-full lg:w-4/5 text-center items-center flex flex-col">
+      <div className="h-auto mb-6 md:h-96 w-full xl:w-4/5 text-center items-center flex flex-col">
         <p className="text-2xl sm:text-3xl font-mono underline text-white m-2">Customer Reviews</p>
-        <p className="text-md sm:text-lg italic text-white">If you don&apos;t believe us just ask our loyal customers!</p>
+        <p className="text-lg sm:text-xl italic text-white mb-6">If you don&apos;t believe us just ask our loyal customers!</p>
         
         {/* Animated Review Carousel */}
         <div className="flex justify-center items-center p-6 h-auto w-full relative">
-          <div className="flex items-center flex-col md:flex-row justify-center gap-4 w-full max-w-6xl">
+          <div className="flex items-center flex-col md:flex-row justify-center gap-4 w-full">
             {reviews.map((review, index) => {
               const isActive = index === currentReview;
               const isPrev = index === (currentReview - 1 + 3) % 3;
@@ -82,10 +82,10 @@ export default function Home() {
                 <div
                   key={review.id}
                   className={`
-                    bg-white w-3/5 md:w-4/5 h-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
+                    bg-white w-2/3 md:w-full h-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
                     transition-all duration-700 ease-in-out
                     ${isActive 
-                      ? 'h-96 w-4/5 md:w-full scale-110 z-20 opacity-300' 
+                      ? 'h-96 w-3/5 scale-110 z-20 opacity-300' 
                       : isPrev || isNext 
                         ? 'h-80 w-80 scale-90 z-10 opacity-70' 
                         : 'h-72 w-72 scale-75 z-0 opacity-40'
@@ -94,11 +94,11 @@ export default function Home() {
                   `}
                 >
                     <Image
-                      className="rounded-full object-cover aspect-square mx-auto mt-2 border-4 border-gray-200 shadow-lg"
+                      className="rounded-full object-cover aspect-square my-2 mx-auto border-4 border-gray-200 shadow-lg w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
                       src={`${review.image}`}
                       alt="Review Image"
-                      width={180}
-                      height={180}
+                      width={192}
+                      height={192}
                     />
                   <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
                     <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
       </div>
       {/* Book now!! */}
-      <div className="flex justify-around flex-row items-center m-12 mt-64 md:mt-56">
+      <div className="flex justify-around flex-row items-center m-12 md:mt-56">
         <div className="bg-yellow-400 text-xl rounded-full text-white px-12 py-4 border-1 border-grey-200 cursor-pointer font-mono drop-shadow-md">
           <p>Book Now!</p>
         </div>
