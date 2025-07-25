@@ -67,9 +67,10 @@ export default function Home() {
             <Gallery />
       {/* Customer review section */}
       <div className="h-auto mb-6 md:h-96 w-full xl:w-4/5 text-center items-center flex flex-col">
+        <div className="bg-gray-500/40 p-4 w-screen">
         <p className="text-2xl sm:text-3xl font-mono underline text-white m-2">Customer Reviews</p>
         <p className="text-lg sm:text-xl italic text-white mb-6">If you don&apos;t believe us just ask our loyal customers!</p>
-        
+        </div>
         {/* Animated Review Carousel */}
         <div className="flex justify-center items-center p-6 h-auto w-full relative">
           <div className="flex items-center flex-col md:flex-row justify-center gap-4 w-full">
@@ -109,7 +110,7 @@ export default function Home() {
                   <div className={`h-10 w-full ${review.bgColor} text-white flex items-center justify-center my-2 transition-all duration-700`}>
                     {review.author}
                   </div>
-                  <p className="text-sm lg:text-lg font-mono text-black p-2">{review.text}</p>
+                  <p className="text-sm lg:text-lg font-mono text-black max-w-80 p-2">{review.text}</p>
                 </div>
               );
             })}
@@ -118,7 +119,7 @@ export default function Home() {
         </div>
       </div>
       {/* Book now!! */}
-      <div className="flex justify-around flex-row items-center m-12 md:mt-56">
+      <div className="flex justify-around flex-row items-center m-12 md:mt-64">
         <div className="bg-yellow-400 text-xl rounded-full text-white px-12 py-4 border-1 border-grey-200 cursor-pointer font-mono drop-shadow-md">
           <p>Book Now!</p>
         </div>
