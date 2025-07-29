@@ -32,9 +32,13 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
               {/* High power cleaning and leading statement */}
-      <div className="z-10 w-full items-center justify-between text-left lg:text-center font-mono text-xl p-6 lg:flex bg-blue-500 text-white">
-        <Link href="/" className="hover:cursor-pointer"><p>High Power <br></br>Cleaning Service</p></Link>
-        <Navbar />
+      <div className="z-10 w-full flex items-center justify-between font-mono text-xl p-6 bg-blue-500 text-white">
+        <Link href="/" className="hover:cursor-pointer flex items-center">
+          <p className="text-left">High Power <br />Cleaning Service</p>
+        </Link>
+        <div className="flex items-center">
+          <Navbar />
+        </div>
       </div>
         {children}
       <Footer />

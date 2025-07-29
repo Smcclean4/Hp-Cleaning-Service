@@ -11,7 +11,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="p-6 flex flex-row items-center w-auto">
+      <div className="p-6 flex flex-row justify-center items-center w-auto">
         <div className="flex flex-row cursor-pointer lg:hidden z-10">
           <div className="w-auto h-auto absolute flex flex-col items-center right-5 top-10 text-center pr-2">
             <ul onClick={openNav}>
