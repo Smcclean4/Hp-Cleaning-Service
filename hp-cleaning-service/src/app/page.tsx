@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import Gallery from './components/Gallery'
+import Link from "next/link";
 
 export default function Home() {
   const [currentReview, setCurrentReview] = useState(0);
@@ -66,62 +67,83 @@ export default function Home() {
             {/* Gallery */}
             <Gallery />
       {/* Customer review section */}
-      <div className="h-auto mb-6 md:h-96 w-full xl:w-4/5 text-center items-center flex flex-col">
-        <div className="bg-gray-500/40 p-4 w-screen">
-        <p className="text-2xl sm:text-3xl font-mono underline text-white m-2">Customer Reviews</p>
-        <p className="text-lg sm:text-xl italic text-white mb-6">If you don&apos;t believe us just ask our loyal customers!</p>
-        </div>
-        {/* Animated Review Carousel */}
-        <div className="flex justify-center items-center p-6 h-auto w-full relative">
-          <div className="flex items-center flex-col md:flex-row justify-center gap-4 w-full">
-            {reviews.map((review, index) => {
-              const isActive = index === currentReview;
-              const isPrev = index === (currentReview - 1 + 3) % 3;
-              const isNext = index === (currentReview + 1) % 3;
-              
-              return (
-                <div
-                  key={review.id}
-                  className={`
-                    bg-white w-2/3 md:w-full h-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
-                    transition-all duration-700 ease-in-out
-                    ${isActive 
-                      ? 'h-96 w-3/5 scale-110 z-20 opacity-300' 
-                      : isPrev || isNext 
-                        ? 'h-80 w-80 scale-90 z-10 opacity-70' 
-                        : 'h-72 w-72 scale-75 z-0 opacity-40'
-                    }
-                    flex flex-col items-center m-4
-                  `}
-                >
-                    <Image
-                      className="rounded-full object-cover aspect-square my-2 mx-auto border-4 border-gray-200 shadow-lg w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
-                      src={`${review.image}`}
-                      alt="Review Image"
-                      width={192}
-                      height={192}
-                    />
-                  <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
-                    <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
-                  </div>
-                  <div className="relative w-3/4 flex justify-center">
-                    <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
-                  </div>
-                  <div className={`h-10 w-full ${review.bgColor} text-white flex items-center justify-center my-2 transition-all duration-700`}>
-                    {review.author}
-                  </div>
-                  <p className="text-sm lg:text-lg font-mono text-black max-w-80 p-2">{review.text}</p>
-                </div>
-              );
-            })}
+      <div className="w-full text-center items-center flex flex-col mt-16">
+        {/* Banner - Full Width */}
+        <div className="w-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 p-8 shadow-2xl relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+          
+          {/* Content */}
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-12 h-1 bg-white/60 rounded-full mr-4"></div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white drop-shadow-lg">
+                Customer Reviews
+              </h2>
+              <div className="w-12 h-1 bg-white/60 rounded-full ml-4"></div>
+            </div>
+            <p className="text-lg sm:text-xl text-white/90 font-light mb-2">
+              Don't just take our word for it
+            </p>
+            <p className="text-sm sm:text-base text-white/80 italic">
+              Hear from our satisfied customers across Los Angeles
+            </p>
           </div>
+        </div>
         
+        {/* Animated Review Carousel */}
+        <div className="w-full xl:w-4/5 mx-auto">
+          <div className="flex justify-center items-center p-6 h-auto w-full relative">
+            <div className="flex items-center flex-col md:flex-row justify-center gap-4 w-full">
+              {reviews.map((review, index) => {
+                const isActive = index === currentReview;
+                const isPrev = index === (currentReview - 1 + 3) % 3;
+                const isNext = index === (currentReview + 1) % 3;
+                
+                return (
+                  <div
+                    key={review.id}
+                    className={`
+                      bg-white w-2/3 md:w-full h-full border-2 rounded-xl ${review.borderColor} drop-shadow-2xl 
+                      transition-all duration-700 ease-in-out
+                      ${isActive 
+                        ? 'h-96 w-3/5 scale-110 z-20 opacity-300' 
+                        : isPrev || isNext 
+                          ? 'h-80 w-80 scale-90 z-10 opacity-70' 
+                          : 'h-72 w-72 scale-75 z-0 opacity-40'
+                      }
+                      flex flex-col items-center m-4
+                    `}
+                  >
+                      <Image
+                        className="rounded-full object-cover aspect-square my-2 mx-auto border-4 border-gray-200 shadow-lg w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                        src={`${review.image}`}
+                        alt="Review Image"
+                        width={192}
+                        height={192}
+                      />
+                    <div className="hidden sm:block absolute -top-4 -right-8 lg:-top-10 lg:-right-2 h-16 w-16 z-50">
+                      <Image src={"/kisspng-computer-icons-quotation-citation-symbol-quote-5abfbdc0180467.3892997615225153920984.png"} alt={""} fill={true} objectFit="cover"></Image>
+                    </div>
+                    <div className="relative w-3/4 flex justify-center">
+                      <Image src={"/kisspng-star-system-confess-clip-art-star-rating-5aeed30a615e99.1344166615256010343988.png"} alt={""} height="200" width="200" objectFit="cover"></Image>
+                    </div>
+                    <div className={`h-10 w-full ${review.bgColor} text-white flex items-center justify-center my-2 transition-all duration-700`}>
+                      {review.author}
+                    </div>
+                    <p className="text-sm lg:text-lg font-mono text-black max-w-80 p-2">{review.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
       {/* Book now!! */}
-      <div className="flex justify-around flex-row items-center m-12 md:mt-64">
+      <div className="flex justify-around flex-row items-center mb-12">
         <div className="bg-yellow-400 text-xl rounded-full text-white px-12 py-4 border-1 border-grey-200 cursor-pointer font-mono drop-shadow-md">
-          <p>Book Now!</p>
+          <Link href="/book">Book Now!</Link>
         </div>
       </div>
     </main >
