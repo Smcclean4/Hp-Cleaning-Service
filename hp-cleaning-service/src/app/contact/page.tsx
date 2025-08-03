@@ -119,7 +119,7 @@ export default function Contact() {
                                     Contact Us
                                 </h1>
                                 <p className="text-xl md:text-2xl text-gray-200 mb-6 max-w-2xl leading-relaxed">
-                                    Get in touch with our professional cleaning team. We're here to help with all your cleaning needs.
+                                    Get in touch with our professional cleaning team. We&apos;re here to help with all your cleaning needs.
                                 </p>
                             </div>
                         </div>
@@ -231,7 +231,7 @@ export default function Contact() {
                                     <div className="flex items-center">
                                         <FontAwesomeIcon icon={faCheck} className="text-green-600 mr-3" />
                                         <p className="text-green-800 font-medium">
-                                            Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                                            Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
                                         </p>
                                     </div>
                                 </div>

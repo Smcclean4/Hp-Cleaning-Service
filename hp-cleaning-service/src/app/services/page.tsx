@@ -98,7 +98,7 @@ export default function Services() {
                 <h3 className="text-2xl font-bold text-red-800 underline underline-offset-4">24/7 Phone Access</h3>
               </div>
               <p className="font-mono text-lg text-gray-700 mb-4 leading-relaxed">
-                Experience seamless communication with High Power's phone services. Whether scheduling appointments or addressing inquiries, our team is just a call away. Trust us for exceptional service.
+                Experience seamless communication with High Power&apos;s phone services. Whether scheduling appointments or addressing inquiries, our team is just a call away. Trust us for exceptional service.
               </p>
               <div className="bg-red-50 p-4 rounded-lg border border-red-200">
                 <h4 className="font-semibold text-red-800 mb-2">📞 Contact Options</h4>
@@ -116,7 +116,7 @@ export default function Services() {
                 <h3 className="text-2xl font-bold text-orange-800 underline underline-offset-4">Detailed Notes</h3>
               </div>
               <p className="font-mono text-lg text-gray-700 mb-4 leading-relaxed">
-                Elevate your cleaning experience with High Power's note-taking service. Detailed notes ensure transparency and accountability. From areas addressed to special instructions, we provide insights for your satisfaction.
+                Elevate your cleaning experience with High Power&apos;s note-taking service. Detailed notes ensure transparency and accountability. From areas addressed to special instructions, we provide insights for your satisfaction.
               </p>
               <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
                 <h4 className="font-semibold text-orange-800 mb-2">📝 Documentation</h4>
@@ -134,7 +134,7 @@ export default function Services() {
                 <h3 className="text-2xl font-bold text-teal-800 underline underline-offset-4">Pristine Tools & Equipment</h3>
               </div>
               <p className="font-mono text-lg text-gray-700 mb-4 leading-relaxed">
-                Unlock pristine cleanliness with High Power's equipment insight. From power washers to cleaning ingredients, we employ top tools for exceptional results. Experience efficiency and quality with our commitment to using the best equipment.
+                Unlock pristine cleanliness with High Power&apos;s equipment insight. From power washers to cleaning ingredients, we employ top tools for exceptional results. Experience efficiency and quality with our commitment to using the best equipment.
               </p>
               <div className="bg-teal-50 p-4 rounded-lg border border-teal-200">
                 <h4 className="font-semibold text-teal-800 mb-2">🛠️ Professional Equipment</h4>

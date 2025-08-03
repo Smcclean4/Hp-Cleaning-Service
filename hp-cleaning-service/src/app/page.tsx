@@ -84,7 +84,7 @@ export default function Home() {
               <div className="w-12 h-1 bg-white/60 rounded-full ml-4"></div>
             </div>
             <p className="text-lg sm:text-xl text-white/90 font-light mb-2">
-              Don't just take our word for it
+              Don&apos;t just take our word for it
             </p>
             <p className="text-sm sm:text-base text-white/80 italic">
               Hear from our satisfied customers across Los Angeles
